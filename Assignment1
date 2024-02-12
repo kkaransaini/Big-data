@@ -1,0 +1,35 @@
+import numpy as np
+
+arr = np.array([1, 2, 3, 6, 4, 5])
+new = np.flip(arr)
+print("final array", str(new))
+
+
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[1, 2], [3, 4]])
+comparison = arr1==arr2
+equal = comparison.all()
+print(equal)
+
+
+x = np.array([1, 2, 3, 4, 5, 1, 2, 1, 1, 1])
+print("Original array:")
+print(x)
+print(np.bincount(x).argmax())
+
+
+y = np.array([1, 1, 1, 2, 3, 4, 2, 4, 3, 3])
+print("Original array:")
+print(y)
+print(np.bincount(y).argmax())
+
+
+gfg = np.matrix('[4, 1, 9; 12, 3, 1; 4, 5, 6]')
+print("Original array:")
+print(gfg)
+print("Sum of all elements:")
+print(np.sum(gfg))
+print("Sum of each column:")
+print(np.sum(gfg, axis=0))
+print("Sum of each row:")
+print(np.sum(gfg, axis=1))
