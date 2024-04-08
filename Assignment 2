@@ -1,0 +1,42 @@
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+res=np.flip(arr)
+print(res)
+
+arr1=np.array([[1,2],[3,4]])
+arr2=np.array([[1,2],[3,4]])
+print(np.array_equal(arr1, arr2))
+
+import numpy as np
+
+
+x = np.array([1, 2, 3, 4, 5,1,2,1,1,1])
+y = np.array([1,1,1,2,3,4,2,4,3,3])
+
+def find_most_frequent_and_indices(data):
+    unique_numbers, counts = np.unique(data, return_counts=True)
+    max_count_index = np.argmax(counts)
+    most_frequent_number = unique_numbers[max_count_index]
+    indices = np.where(data == most_frequent_number)[0]
+    return most_frequent_number, indices
+
+
+most_frequent_number1, indices1 = find_most_frequent_and_indices(x)
+most_frequent_number2, indices2 = find_most_frequent_and_indices(y)
+
+
+print(f"Array 1: Most frequent number: {most_frequent_number1}, Indices of occurrences: {indices1}")
+print(f"Array 2: Most frequent number: {most_frequent_number2}, Indices of occurrences: {indices2}")
+
+gfg = np.matrix('[4, 1, 9; 12, 3, 1; 4, 5, 6]')
+
+
+total_sum = np.sum(gfg)
+
+
+row_sum = np.sum(gfg, axis=1)
+
+column_sum = np.sum(gfg, axis=0)
+print("Sum of all elements:", total_sum)
+print("Sum of all elements row-wise:\n", row_sum)
+print("Sum of all elements column-wise:\n", column_sum)
