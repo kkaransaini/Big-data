@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
+import pandas as pd
+df=pd.read_csv(r"C:\Users\navis\Downloads\data.csv")
+print(df)
+data=list(zip(df['x'],df['y']))
+print(data)
+
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(data)
+plt.scatter(df['x'],df['y'] ,c=kmeans.labels_)
+plt.show()
