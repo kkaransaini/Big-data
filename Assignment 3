@@ -1,0 +1,25 @@
+import pandas as pd
+dic={
+    "Tid":[1,2,3,4,5,6,7,8,9,10],
+    "Refund":["yes","no","no","yes","no","no","yes","no","no","no"],
+    "MaritalStatus":["Single","Married","Single","Married","Divorced","Married","Divorced","Single","Married","Single"],
+    "TaxableIncome":["125k","100k","70k","120k","95k","60k","220k","85k","75k","90k"],
+    "Cheat":["No","No","No","No","yes","No","No","yes","No","yes"]
+}
+data=pd.DataFrame(dic)
+print(data)
+
+print(pd.DataFrame(data.loc[0]))
+
+print(data.loc[4])
+
+print(data.loc[7])
+
+print(data.loc[8])
+
+from google.colab import files
+import io
+uploaded = files.upload()
+
+df = pd.read_csv(io.BytesIO(uploaded['f.csv.csv']))
+print(df)
