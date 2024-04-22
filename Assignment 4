@@ -1,0 +1,22 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+data = pd.read_csv("company_sales_data.csv")
+
+plt.plot(data['month_number'], data['total_profit'])
+
+plt.title("line plot")
+
+plt.xlabel('Day')
+plt.ylabel('Tip')
+plt.show()
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+data = pd.read_csv("company_sales_data.csv")
+
+plt.bar(data['month_number'], data['total_units'])
+
+# plt.plot()
+
+plt.title("line plot")
