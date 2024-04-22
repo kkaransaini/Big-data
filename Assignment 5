@@ -1,0 +1,67 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+data = pd.read_csv("company_sales_data.csv")
+sns.lineplot(x="month_number", y="total_profit", data=data)
+plt.show()
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = pd.read_csv("company_sales_data.csv")
+
+sns.lineplot(x="month_number", y="facecream", data=data)
+sns.lineplot(x="month_number", y="facewash", data=data)
+sns.lineplot(x="month_number", y="toothpaste", data=data)
+sns.lineplot(x="month_number", y="bathingsoap", data=data)
+sns.lineplot(x="month_number", y="shampoo", data=data)
+sns.lineplot(x="month_number", y="moisturizer", data=data)
+
+plt.title('Product Sales Trends')
+plt.xlabel('Month')
+plt.ylabel('Total Profit')
+
+plt.show()
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = pd.read_csv("company_sales_data.csv")
+
+sns.barplot(x="month_number", y="facecream", data=data, color='skyblue', label='Facecream')
+sns.barplot(x="month_number", y="facewash", data=data, color='orange', label='Facewash')
+sns.barplot(x="month_number", y="toothpaste", data=data, color='green', label='Toothpaste')
+sns.barplot(x="month_number", y="bathingsoap", data=data, color='red', label='Bathing Soap')
+sns.barplot(x="month_number", y="shampoo", data=data, color='purple', label='Shampoo')
+sns.barplot(x="month_number", y="moisturizer", data=data, color='brown', label='Moisturizer')
+
+
+plt.title('Product Sales Trends')
+plt.xlabel('Month')
+plt.ylabel('Total Profit')
+
+plt.show()
+
+
+import plotly.express as px
+import pandas as pd
+
+data = pd.read_csv("company_sales_data.csv")
+
+fig = px.scatter(data, x="month_number", y="total_profit", size="total_profit", hover_data=["facecream", "facewash", "toothpaste", "bathingsoap", "shampoo", "moisturizer"], title="Product Sales Scatter Plot")
+
+fig.show()
+
+
+import plotly.express as px
+import pandas as pd
+
+data = pd.read_csv("company_sales_data.csv")
+
+fig = px.histogram(data,x="month_number", y="total_profit", nbins=15, title="Total Profit Histogram")
+
+fig.show()
